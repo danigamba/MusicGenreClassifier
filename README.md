@@ -3,11 +3,12 @@ A Simple Music Genre Classifier
 
 ## Welcome
 I have recently found the Deep Audio Classification (https://github.com/despoisj/DeepAudioClassification) repository
-and i was courious if i can get to work something similar without necessarly use Deep Neural Network to recognize music genres.
+and i was curious if i can get to work something similar without necessarly use Deep Neural Network to recognize music genres.
+Please keep in mind that *Sources are changing faster than this readme*
 
-### Disclamer
-This isn't anything professional, it's just a spare time project i'm developping to learn something about Machine Learning and Data Analysis.
-The software is provided as is without any warranty, please read the attached licence.
+### Disclaimer
+This isn't anything professional, it's just a spare time project I'm developing to learn something about Machine Learning and Data Analysis.
+The software is provided as is without any warranty, please read the attached license.
 
 ### Setup
 To train the regression you have to place your labeled music into the data/ folder.
@@ -23,7 +24,7 @@ If you don't have mp3 support just install *libsox-fmt-mp3* or *libsox-fmt-all*
 ### Usage
 The software is written in Python 3.
 I personally recommend to install Continuum Anaconda to have anything ready and working.
-If you don't want to install the complete Anaconda package first install dependecies:
+If you don't want to install the complete Anaconda package first install dependencies:
 ```
 pip3 install -r requirements.txt
 ```
@@ -48,5 +49,5 @@ Classes are
 - PanteraHeresy.wav: [100] - with prob. [[ 0.17705346  0.21830755  0.604639  ]]
 - BeethovenOdeToJoy.wav: [50] - with prob. [[ 0.34649982  0.45182985  0.20167033]]
 ```
-Note that the probabily is ordered by the label value.
+Note that the probability is ordered by the label value.
 
