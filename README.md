@@ -51,3 +51,28 @@ Classes are
 ```
 Note that the probability is ordered by the label value.
 
+## How it works
+The following explaination is probably full of mistakes and error, write me to correct them please!
+
+### The big picture
+This kind of problem could be schematized in the following diagram
+
+![alt tag](https://s17.postimg.org/poj0pxg8f/Music_Genre_1.png)
+
+### Features Extraction
+I don't know much about music, i know that these are signal, so my first approach is to compute the spectrum and try to parametrize it.
+To parametrize the spectrum I've used the Welch algorithm that works exceptionally well to suppress the noise.
+It computes the spectrum for different slices of the song and then average them.
+My parameters at the end of the computation are the first *n* 20 Hz multiples. 
+This is purely heuristic and it's based on some spectrum plot i saw.
+I'm trying to figure out some better tecnique to characterize a song, based not only on the spectrum.
+
+### Model
+The model in this kind of application is a *Logistic Regression*.
+I've used the fantastic sk-learn implementation (http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+I will try to do classification with a simple neural network, if it's possible.
+
+### To Do
+- Improve features extraction. Find better parameters to characterize a song
+- Create a large enough dataset to train the model with a better accouracy
+- Add direct mp3 support and eyed3 label extraction

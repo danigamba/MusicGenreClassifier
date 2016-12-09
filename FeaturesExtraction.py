@@ -11,7 +11,7 @@ from scipy.signal import welch
 
 def extractFeatures(filename, nFeatures):
     rate, data = wavfile.read(filename)
-    f, Pxx = welch(data, fs=rate, nperseg=1024)
+    f, Pxx = welch(data, fs=rate, nperseg=2048)
     if nFeatures == 127:
         return Pxx[[i for i in range(0, len(f)) if f[i] <= 5000]] #whole spectrum from 0 to 5kHz
     
